@@ -1,0 +1,7 @@
+.idea
+node_modules
+*.log
+*.pyc
+.DS_Store
+venv/*
+out

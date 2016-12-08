@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='/css/style.css' />
+    <style>
+        .show{width: 400px;height: 630px;margin: 30px auto;overflow: hidden;position: relative;}
+        .page-header{margin-top: 70px;}
+        .main{width: 987px;height: 1280px;transform: scale(0.492188); left: -42.8945px;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
+        .show *{display: block;position: absolute;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
+    </style>
+</head>
+<body>
+<div class='top'><a href="/">返回首页</a></div>
+<div class="page-header">
+    <h1>效果图：<small><%= name %></small></h1>
+</div>
+<div class="show">
+    <div class="main">
+        <% if (data.length) { %>
+            <% data.forEach(function(item){%>
+                <div style="left:<%= item.left%>px;top:<%= item.top%>px;width:<%=item.width%>px;height:<%= item.height%>px;background-image:url(/out/<%= item.name%>.png)"></div>
+            <% }) %>
+        <% } %>
+    </div>
+</div>
+
+</body>
+</html>

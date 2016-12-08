@@ -1,0 +1,7 @@
+* {margin: 0px;padding: 0px;border: 0px;}
+body,html,div,img {display: block;position: absolute;}
+body,html {width: 100%;overflow-x: hidden;-webkit-overflow-scrolling:touch;}
+.def_page{left: 0;top: 0;width: 987px;height: 1280px;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
+.def_hide{display: none;}
+.btn{-webkit-transform-origin:50% 50%;transform-origin:50% 50%;}
+/*-----------------------------loading Page----------------------------------*/
