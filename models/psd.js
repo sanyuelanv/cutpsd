@@ -14,7 +14,7 @@ psd.addAll = function(arr,sid,callback){
 		if(i != arr.length - 1){str = str + ',';}
 	}
 	pool.getConnection(function(err,connection) {
-		//错误，返回 err 信息
+		//错误，返回 err 信息 
 		if(err){return callback(err);}
 		//插入
 		connection.query(sql.insert+str,function(err){

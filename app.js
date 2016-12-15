@@ -7,8 +7,7 @@ var bodyParser = require('body-parser');
 //4.0只要要自己添加
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
-var redis = require('./config/rbd');
-
+// var redis = require('./config/rbd');
 var routes = require('./routes/index');
 
 var app = express();
@@ -24,13 +23,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json({'limit': '50mb'}));
 app.use(bodyParser.urlencoded({'limit': '50mb'}));
 app.use(cookieParser());
-// 配置session
+// 配置session:禁用redis。可以自行开启
 app.use(session({
   secret: "keyboard cat",
   resave:false,
   saveUninitialized:true,
   cookie: {maxAge: 1000 * 60 * 60 * 24},
-  store: new RedisStore(redis)
+  // store: new RedisStore(redis)
 }));
 app.use(express.static(path.join(__dirname, 'static')));
 

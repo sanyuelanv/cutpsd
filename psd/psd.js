@@ -30,7 +30,7 @@ var MapImg = function(fileName,callback){
         imgObj.name = name;
         if(layer.visible){
             /*记录宽高，左上边距*/
-            var h = layer.height;if(h > 1280){h = 1280;}
+            var h = layer.height;
             imgObj.height = h;
             imgObj.width = layer.width;
             imgObj.left = layer.left;

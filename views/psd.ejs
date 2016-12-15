@@ -5,9 +5,9 @@
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
     <link rel='stylesheet' href='/css/style.css' />
     <style>
-        .show{width: 400px;height: 630px;margin: 30px auto;overflow: hidden;position: relative;}
+        .show{width: 360px;height: 630px;margin: 30px auto;overflow-x:hidden;position: relative;}
         .page-header{margin-top: 70px;}
-        .main{width: 987px;height: 1280px;transform: scale(0.492188); left: -42.8945px;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
+        .main{width: 720px;height: 1280px;transform: scale(0.5); left: 0px;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
         .show *{display: block;position: absolute;-webkit-transform-origin: 0 0;transform-origin: 0 0;}
     </style>
 </head>
@@ -20,7 +20,7 @@
     <div class="main">
         <% if (data.length) { %>
             <% data.forEach(function(item){%>
-                <div style="left:<%= item.left%>px;top:<%= item.top%>px;width:<%=item.width%>px;height:<%= item.height%>px;background-image:url(/out/<%= item.name%>.png)"></div>
+                <div style="left:<%= item.l%>px;top:<%= item.t%>px;width:<%=item.w%>px;height:<%= item.h%>px;background-image:url(/out/<%= item.name%>.png)"></div>
             <% }) %>
         <% } %>
     </div>
